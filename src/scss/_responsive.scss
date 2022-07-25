@@ -1,0 +1,51 @@
+$bootstrap_xl: 1200px;
+$bootstrap_lg: 992px;
+$bootstrap_md: 768px;
+
+$tel_max: 414px;
+$tel_lg: 375px;
+$tel_sm: 360px;
+$tel_xs: 320px;
+$tel_xxs: 280px;
+
+@mixin media_tablet {
+    @media only screen and (max-width: $bootstrap_xl - 1) {
+        @content;
+    }
+}
+
+@mixin media_tablet_vert {
+    @media only screen and (max-width: $bootstrap_lg - 1) {
+        @content;
+    }
+}
+
+@mixin media_tel {
+    @media only screen and (max-width: $bootstrap_md - 1) {
+        @content;
+    }
+}
+
+@mixin media_tel_lg {
+    @media only screen and (max-width: $tel_max - 1) {
+        @content;
+    }
+}
+
+@mixin media_tel_sm {
+    @media only screen and (max-width: $tel_lg - 1) {
+        @content;
+    }
+}
+
+@mixin media_tel_xs {
+    @media only screen and (max-width: $tel_sm - 1) {
+        @content;
+    }
+}
+
+@mixin media_tel_xxs {
+    @media only screen and (max-width: $tel_xs - 1) {
+        @content;
+    }
+}

@@ -1,0 +1,48 @@
+@mixin flexSize($input: null) {
+    @if ($input != null) {
+        flex: 0 0 $input;
+        max-width: $input;
+        width: $input;
+    }
+}
+
+@mixin flexSizeChange($input: null) {
+    @if ($input != null) {
+        flex-basis: $input;
+        max-width: $input;
+        width: $input;
+    }
+}
+
+@mixin flexReset() {
+    flex: 0 1 auto;
+    max-width: none;
+    width: auto;
+}
+
+@mixin imgBlock {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@mixin inheritLink {
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+@mixin clearList() {
+    overflow: visible;
+
+    &, ul, li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li:before {
+        display: none;
+    }
+}
